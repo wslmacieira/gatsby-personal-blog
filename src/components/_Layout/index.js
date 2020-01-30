@@ -4,10 +4,13 @@ import Profile from '../Profile';
 
 import { LayoutWrapper, LayoutMain } from './styles';
 
+import GlobalStyles from '../../styles/global';
+
 const Layout = ({ children }) => {
 
   return (
     <LayoutWrapper>
+      <GlobalStyles />
       <aside>
         <Profile />
       </aside>
