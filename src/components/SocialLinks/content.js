@@ -5,15 +5,15 @@ const links = [
   },
   {
     label: 'Twitter',
-    url: 'https://twitter.com'
+    url: '#'
   },
   {
     label: 'Youtube',
-    url: 'https://www.youtube.com'
+    url: '#'
   },
   {
-    label: 'Instagran',
-    url: 'https://www.instagran.com'
+    label: 'Instagram',
+    url: '#'
   },
   {
     label: 'Linkedin',
