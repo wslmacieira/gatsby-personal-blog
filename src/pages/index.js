@@ -12,6 +12,9 @@ const IndexPage = () => {
       allMarkdownRemark {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
               title
               background
@@ -19,7 +22,7 @@ const IndexPage = () => {
               date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
               description
             }
-            timeToRead
+            timeToRead,
           }
         }
       }
@@ -36,10 +39,11 @@ const IndexPage = () => {
         node: {
           frontmatter: { title, background, category, date, description },
           timeToRead,
+          fields: { slug }
         },
       }) => (
           <PostItem
-            slug="/about/"
+            slug={slug}
             category={category}
             background={background}
             date={date}
