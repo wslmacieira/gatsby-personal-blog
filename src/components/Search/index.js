@@ -3,6 +3,8 @@ import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, SearchBox, Hits, Stats } from 'react-instantsearch-dom';
 
+import Hit from './Hit';
+
 import * as S from './styles';
 
 const algolia = {
@@ -20,7 +22,7 @@ const Search = () => (
       <Stats translations={{stats(nbHits, timeSpentMs) {
         return `${nbHits} resultados encontrados em ${timeSpentMs}ms`
       }}} />
-      <Hits />
+      <Hits hitComponent={Hit} />
     </InstantSearch>
   </S.SearchWrapper>
 )
