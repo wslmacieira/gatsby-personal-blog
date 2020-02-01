@@ -26,34 +26,52 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
-  {
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
-      edges {
-        node {
-          fields {
-            slug
+    {
+      allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+            }
+            timeToRead
           }
-          frontmatter {
-            title
-            background
-            category
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            description
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
           }
-          timeToRead,
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
-  }
  `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
         component: path.resolve("./src/templates/blog-post.js"),
         context: {
-          slug: node.fields.slug
+          slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous
         }
       })
     })
