@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="dark">
+      <body {...props.bodyAttributes} className="light">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -35,7 +35,26 @@ export default function HTML(props) {
                   localStorage.setItem('theme', newTheme);
                 } catch (err) {}
               }
-              setTheme(preferredTheme || 'dark');
+              setTheme(preferredTheme || 'light');
+
+              window.__onDisplayChange = function() {};
+              function setDisplay(newDisplay) {
+                window.__display = newDisplay;
+                preferredDisplay = newDisplay;
+                document.body.id = newDisplay;
+                window.__onDisplayChange(newDisplay);
+              }
+              var preferredDisplay;
+              try {
+                preferredDisplay = localStorage.getItem('display');
+              } catch (err) { }
+              window.__setPreferredDisplay = function(newDisplay) {
+                setDisplay(newDisplay);
+                try {
+                  localStorage.setItem('display', newDisplay);
+                } catch (err) {}
+              }
+              setDisplay(preferredDisplay || 'list');
             })();
           `,
           }}

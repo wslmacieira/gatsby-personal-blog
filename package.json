@@ -34,7 +34,6 @@
     "styled-icons": "^9.2.0"
   },
   "devDependencies": {
-    "eslint-plugin-jsx-a11y": "^6.2.3",
     "prettier": "^1.19.1"
   },
   "keywords": [
