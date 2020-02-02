@@ -26,6 +26,7 @@ const BlogList = props => {
         },
       }) => (
           <PostItem
+            key={slug}
             slug={slug}
             category={category}
             background={background}
