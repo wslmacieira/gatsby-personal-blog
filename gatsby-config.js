@@ -8,11 +8,12 @@ module.exports = {
     position: 'Developer | ReactJS | React Native | Node.js',
     description: 'A blog about fullstack development and other coll stuff',
     author: '@wslmacieira',
+    siteUrl: 'https://wslmacieira.com.br',
   },
   plugins: [
+    'gatsby-plugin-transition-link',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-transition-link',
     // needs to be the first to work with gatsby-remark-images
     {
       resolve: 'gatsby-source-filesystem',
@@ -67,7 +68,7 @@ module.exports = {
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         queries,
         chunkSize: 10000, // default: 1000
-        enablePartialUpdates: true, // default: false
+        enablePartialUpdates: false, // default: false
       },
     },
     {
