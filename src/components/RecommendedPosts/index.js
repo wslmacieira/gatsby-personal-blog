@@ -1,5 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
+
+import getThemeColor from '../../utils/getThemeColor';
+
 import * as S from './styles';
 
 const RecommendedPosts = ({ next, previous }) => (
@@ -10,7 +13,7 @@ const RecommendedPosts = ({ next, previous }) => (
         to={previous.fields.slug}
         className="previous"
         direction="left"
-        bg="#16202c"
+        bg={getThemeColor()}
       >
         {previous.frontmatter.title}
       </S.RecommendedLink>
@@ -21,7 +24,7 @@ const RecommendedPosts = ({ next, previous }) => (
         to={next.fields.slug}
         className="next"
         direction="left"
-        bg="#16202c"
+        bg={getThemeColor()}
       >
         {next.frontmatter.title}
       </S.RecommendedLink>
@@ -30,6 +33,25 @@ const RecommendedPosts = ({ next, previous }) => (
 );
 
 RecommendedPosts.propTypes = {
+  next: propTypes.shape({
+    frontmatter: propTypes.shape({
+      title: propTypes.string.isRequired,
+    }),
+    fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
+  }),
+  previous: propTypes.shape({
+    frontmatter: propTypes.shape({
+      title: propTypes.string.isRequired,
+    }),
+    fields: propTypes.shape({
+      slug: propTypes.string.isRequired,
+    }),
+  }),
+};
+
+RecommendedPosts.defaultProps = {
   next: propTypes.shape({
     frontmatter: propTypes.shape({
       title: propTypes.string.isRequired,

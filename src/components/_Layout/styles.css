@@ -1,0 +1,23 @@
+.tl-wrapper--unmount {
+  /*
+    Just make sure animation time is same that transition duration in <AniLink />
+    as well add some delay (e.g. 0.2s as in example) to avoid weird blinking at the end
+  */
+  animation: 1s ease-out 0.2s normal fadeout;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
