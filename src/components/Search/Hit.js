@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PostItem from '../PostItem';
 
 const Hit = ({ hit }) => (
@@ -11,6 +11,6 @@ const Hit = ({ hit }) => (
     description={hit.description}
     category={hit.category}
   />
-)
+);
 
 export default Hit;

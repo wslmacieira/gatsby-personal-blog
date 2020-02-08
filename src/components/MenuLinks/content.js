@@ -6,8 +6,7 @@ const links = [
   {
     label: 'Sobre Min',
     url: '/about/',
-  }
-]
+  },
+];
 
 export default links;
-

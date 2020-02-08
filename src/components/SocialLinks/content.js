@@ -1,24 +1,24 @@
 const links = [
   {
     label: 'Github',
-    url: 'https://github.com/wslmacieira'
+    url: 'https://github.com/wslmacieira',
   },
   {
     label: 'Twitter',
-    url: '#'
+    url: '#',
   },
   {
     label: 'Youtube',
-    url: '#'
+    url: '#',
   },
   {
     label: 'Instagram',
-    url: '#'
+    url: '#',
   },
   {
     label: 'Linkedin',
-    url: 'https://www.linkedin.com/in/wagner-santos-lima-60691a192/'
+    url: 'https://www.linkedin.com/in/wagner-santos-lima-60691a192/',
   },
-]
+];
 
 export default links;

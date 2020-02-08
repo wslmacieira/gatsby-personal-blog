@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import { Link } from "gatsby";
+import styled from 'styled-components';
+import media from 'styled-media-query';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export const RecommendedWrapper = styled.section`
   display: flex;
@@ -9,7 +9,7 @@ export const RecommendedWrapper = styled.section`
   background: var(--mediumBackground);
 `;
 
-export const RecommendedLink = styled(Link)`
+export const RecommendedLink = styled(AniLink)`
   display: flex;
   align-items: center;
   background: var(--mediumBackground);
@@ -19,7 +19,7 @@ export const RecommendedLink = styled(Link)`
   transition: background 0.5s;
   width: 50%;
 
-  ${media.lessThan("large")`
+  ${media.lessThan('large')`
     padding: 2rem 1rem;
     line-height: 1.3;
     font-size: .9rem;
@@ -38,12 +38,12 @@ export const RecommendedLink = styled(Link)`
   }
 
   &.previous:before {
-    content: "\\2190";
+    content: '\\2190';
     margin-right: 0.5rem;
   }
-  
+
   &.next:after {
-    content: "\\2192";
+    content: '\\2192';
     margin-left: 0.5rem;
   }
 `;

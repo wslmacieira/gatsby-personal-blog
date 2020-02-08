@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from "../components/_Layout";
-import SEO from "../components/seo";
+import Layout from '../components/_Layout';
+import SEO from '../components/seo';
 import RecommendedPosts from '../components/RecommendedPosts';
 import Comments from '../components/Comments';
 
@@ -18,23 +18,23 @@ const BlogPost = ({ data, pageContext }) => {
       <SEO title={post.frontmatter.title} />
       <S.PostHeader>
         <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
+          {post.frontmatter.date} •{post.timeToRead} min de leitura
         </S.PostDate>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>
       <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
       <RecommendedPosts next={next} previous={previous} />
       <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query Post($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }

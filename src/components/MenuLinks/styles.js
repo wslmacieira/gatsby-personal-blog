@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export const MenuLinksWrapper = styled.nav`
   ${media.lessThan('large')`
@@ -14,14 +14,14 @@ export const MenuLinksList = styled.ul`
 `;
 
 export const MenuLinksItem = styled.li`
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 
   .active {
     color: var(--highlight);
   }
 `;
 
-export const MenuLinksLink = styled(Link)`
+export const MenuLinksLink = styled(AniLink)`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;

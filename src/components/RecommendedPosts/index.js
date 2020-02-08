@@ -5,17 +5,29 @@ import * as S from './styles';
 const RecommendedPosts = ({ next, previous }) => (
   <S.RecommendedWrapper>
     {previous && (
-      <S.RecommendedLink to={previous.fields.slug} className="previous">
+      <S.RecommendedLink
+        cover
+        to={previous.fields.slug}
+        className="previous"
+        direction="left"
+        bg="#16202c"
+      >
         {previous.frontmatter.title}
       </S.RecommendedLink>
     )}
     {next && (
-      <S.RecommendedLink to={next.fields.slug} className="next">
+      <S.RecommendedLink
+        cover
+        to={next.fields.slug}
+        className="next"
+        direction="left"
+        bg="#16202c"
+      >
         {next.frontmatter.title}
       </S.RecommendedLink>
     )}
   </S.RecommendedWrapper>
-)
+);
 
 RecommendedPosts.propTypes = {
   next: propTypes.shape({
@@ -34,6 +46,6 @@ RecommendedPosts.propTypes = {
       slug: propTypes.string.isRequired,
     }),
   }),
-}
+};
 
 export default RecommendedPosts;
