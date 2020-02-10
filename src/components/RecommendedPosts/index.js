@@ -14,6 +14,7 @@ const RecommendedPosts = ({ next, previous }) => (
         className="previous"
         direction="left"
         bg={getThemeColor()}
+        duration={0.6}
       >
         {previous.frontmatter.title}
       </S.RecommendedLink>
@@ -25,6 +26,7 @@ const RecommendedPosts = ({ next, previous }) => (
         className="next"
         direction="left"
         bg={getThemeColor()}
+        duration={0.6}
       >
         {next.frontmatter.title}
       </S.RecommendedLink>
