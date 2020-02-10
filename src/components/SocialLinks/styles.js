@@ -13,11 +13,13 @@ export const SocialLinksWrapper = styled.nav`
 export const SocialLinksList = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
 `;
 
-export const SocialLinksItem = styled.li``;
+export const SocialLinksItem = styled.li`
+  margin: 0 10px;
+`;
 
 export const SocialLinksLink = styled.a`
   color: var(--texts);
