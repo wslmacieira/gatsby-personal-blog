@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Wagner Santos',
     position: 'Developer | ReactJS | React Native | Node.js',
-    description: 'A blog about fullstack development and other coll stuff',
+    description: 'A blog about development and other coll stuff',
     author: '@wslmacieira',
     siteUrl: 'https://wagnersl.netlify.com',
   },

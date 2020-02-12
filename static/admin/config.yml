@@ -35,12 +35,11 @@ collections:
         name: "background",
         widget: "select",
         options: [
-          { label: "Jekyll", value: "#B31917" },
-          { label: 'CSS', value: '#2DA0C3' },
+          { label: 'Mobile', value: '#2DA0C3' },
           { label: 'JS', value: '#D6BA32' },
-          { label: 'HTML', value: '#EB7728' },
-          { label: 'SVG', value: '#7D669E' },
-          { label: 'Dev', value: '#637a91' },
+          { label: 'Dev', value: '#EB7728' },
+          { label: 'Css', value: '#7D669E' },
+          { label: 'Web', value: '#637a91' },
           { label: 'Misc', value: '#7AAB13' },
         ]
       }
