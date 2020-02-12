@@ -15,18 +15,18 @@ const AboutPage = () => (
     <MainContent>
       <h1>Sobre mim</h1>
       <p>
-        Meu nome é Wagner dos Santos Lima, nasci em Itabaiana/SE e atualmente sou desenvolvedor
-        com foco em Javascript com a stack (ReactJs | React Native | Node.js)
+        Meu nome é Wagner dos Santos Lima, nasci em Itabaiana/SE, atualmente sou desenvolvedor
+        com foco em Javascript com a stack (ReactJS | React Native | Node.js)
       </p>
 
 
       <p>
-        Cursando Analise e desenvolvimento de sistemas pela Cruzeiro do Sul
+        Cursando Análise e Desenvolvimento de Sistemas pela Cruzeiro do Sul
         atualmente (2020).
       </p>
 
       <p>
-        Cursando GoStack Bootcamp (ReactJS - React Native - Node.js) pela RocketSeat
+        Cursando GoStack Bootcamp (ReactJS - React Native - Node.js) pela Rocketseat
         atualmente (2020).
       </p>
 
@@ -35,8 +35,8 @@ const AboutPage = () => (
 
       <p>
         No meu tempo livre, gosto de ver filmes, ir na igreja, tocar violino
-        amo a musica pois ela é a forma de expressar os diversos afetos da alma,
-        ataco de master cheff na cozinha fazendo varias gordices para alegrar a todos.
+        amo a música pois ela é a forma de expressar os diversos afetos da alma,
+        ataco de MasterChef fazendo varias gordices na cozinha para alegrar a todos.
       </p>
 
       <h2>Habilidades</h2>
